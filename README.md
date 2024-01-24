@@ -2,7 +2,7 @@
 
 This repository contains a working Arduino sketch for outputting sine data to an external DAC over I2S.
 
-ESP32C3_I2S-sine-DDS-1024.ino has a large 1024-entry lookup table and uses Direct Digital Synthesis to send out the data.
+ESP32C3_I2S-sine-DDS-1024.ino has a large 1024-entry lookup table and uses Direct Digital Synthesis to generate the data.
 
 Sample rates of 44.1Khz, 48kHz, 88.2kHz or 96kHz are possible. The DAC can handle these sample rates without any problem [and will oversample the data at 384kHz before generating an analog signal]. Distortion measured lower than -60dB.
 
