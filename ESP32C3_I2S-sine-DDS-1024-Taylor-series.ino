@@ -53,7 +53,7 @@ void generateTaylorSeriesSineTable() {
     double sum = 0.0;
 
     for (int j = 0; j <= 11; ++j) {  // use 11 terms in the Taylor series
-      double term = pow(-1, j) * pow(x, 2 * j + 1) / taylorSeriesFactorial(2 * j + 1);
+      double term = pow(-1, j) * pow(x, 2 * j + 1) / factorial(2 * j + 1);
       sum += term;
     }
 
@@ -61,10 +61,6 @@ void generateTaylorSeriesSineTable() {
   }
 }
 
-double taylorSeriesFactorial(int n) {
-  double fact = 1.0;
-  for (int i = 1; i <= n; ++i) {
-    fact *= i;
-  }
-  return fact;
+double factorial(int n) {
+  return (n == 1 || n == 0) ? 1 : factorial(n - 1) * n;
 }
